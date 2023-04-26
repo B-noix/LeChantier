@@ -24,7 +24,16 @@ public class Le_Chantier {
       
      double x,y;
         ArrayList<Coin> listeCoin = new ArrayList<>();
-       ArrayList<Coin> liste = new ArrayList<>();
+       ArrayList<Coin> listeCoinTemp = new ArrayList<>();
+       ArrayList<Mur> listeMur = new ArrayList<>();
+       ArrayList<Mur> listeMurTemp = new ArrayList<>();
+       ArrayList<Piece> listePiece = new ArrayList<>();
+       ArrayList<Piece> listePieceTemp = new ArrayList<>();
+       //ArrayList<Coin> listeAppart = new ArrayList<>();
+       //ArrayList<Coin> listeAppartTemp = new ArrayList<>();
+       
+       
+       
      System.out.println(" nouveau coin ");
      System.out.println(" entrer position x");
      x=Lire.d();

@@ -40,6 +40,24 @@ public class Coin {
     {
         System.out.println(" Coin : id ="+this.idCoin+" abscisse = "+this.cx+ " Ordonnée ="+this.cy);
     }
-   
+   public double getx(){ 
+       return cx;
+   }
+    public double gety(){ 
+       return cy;
+   }
+     public int getid(){ 
+       return idCoin;
+   }
+     
+     public String toSave(){
+         StringBuilder sb = new StringBuilder();
+        sb.append("Coin");
+        sb.append(",").append(idCoin);
+        sb.append(",").append(cx);
+        sb.append(",").append(cy);
+        
+        return sb.toString();
+     }
             
 }

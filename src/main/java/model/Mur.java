@@ -12,14 +12,15 @@ package model;
 public class Mur {
     int idMur;
     Coin debut, fin;
+    Revetement revet;
     
     
-    
-    Mur(int id, Coin dc, Coin fc)
+    Mur(int id, Coin dc, Coin fc, Revetement revet)
     {
         this.idMur=id;
         this.debut=dc;
         this.fin=fc;
+        this.revet=revet;
     }
     
     void afficher()
@@ -39,9 +40,19 @@ public class Mur {
         //double hsp=Lire.d();
         return(this.longueur()*2.70);
     }
-    @Override
-    public String toString() {
-        return "Mur{" + "idMur=" + idMur + ", debut=" + debut + ", fin=" + fin + '}';
+   
+    public String toSave() {
+        return "Mur" + "," + idMur + "," + debut + "," + fin ;
     }
-    
+    public Coin getdebut() {
+        return debut;
+    }
+
+    public Coin getFin() {
+        return fin;
+    }
+
+    public Revetement getReve() {
+        return revet;
+    }
 }
