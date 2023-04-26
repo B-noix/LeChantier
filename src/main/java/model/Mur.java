@@ -5,17 +5,14 @@ package model;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-/**
- *
- * @author Amadou Coulibaly
- */
+import java.util.*;
 public class Mur {
     int idMur;
     Coin debut, fin;
-    Revetement revet;
     
+    List<Revetement> revet = new ArrayList<Revetement>() ;
     
-    Mur(int id, Coin dc, Coin fc, Revetement revet)
+    Mur(int id, Coin dc, Coin fc, List revet)
     {
         this.idMur=id;
         this.debut=dc;
@@ -52,7 +49,7 @@ public class Mur {
         return fin;
     }
 
-    public Revetement getReve() {
+    public List getReve() {
         return revet;
     }
 }

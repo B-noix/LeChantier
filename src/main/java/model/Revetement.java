@@ -13,10 +13,17 @@ package model;
 public class Revetement {
     int Idrevetement;
     String designation;
-    int pourMur;
-    int pourSol;
-    int pourPlafond;
+    boolean pourMur;
+    boolean pourSol;
+    boolean pourPlafond;
     double prixUnitaire;
     
-    
+     public Revetement( int id , String nom , boolean pMur , boolean pSol , boolean pplafond, double prix){
+        this.Idrevetement=id;
+        this.designation=nom;
+        this.pourMur=pMur;
+        this.pourPlafond=pplafond;
+        this.pourSol=pSol;
+        this.prixUnitaire=prix;
+    }
 }

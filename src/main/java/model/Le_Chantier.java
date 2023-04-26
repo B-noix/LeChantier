@@ -61,8 +61,10 @@ public class Le_Chantier {
      
      
     System.out.println(listeCoin);
-     
-    Mur Mur = new Mur(1,listeCoin.get(0),listeCoin.get(1));
+    
+    List<Revetement> revet = new ArrayList<Revetement>();
+    
+    Mur Mur = new Mur(1,listeCoin.get(0),listeCoin.get(1),revet);
     Mur.afficher();
     
     
