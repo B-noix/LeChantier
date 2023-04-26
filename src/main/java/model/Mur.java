@@ -52,4 +52,12 @@ public class Mur {
     public List getReve() {
         return revet;
     }
+    
+    double montantRevet(){
+       double prix=0;
+        for(Revetement r : revet ){
+            prix=prix + r.getPu()*surface();
+        }
+        return prix;
+    }
 }

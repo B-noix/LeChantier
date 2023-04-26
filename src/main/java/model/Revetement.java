@@ -26,4 +26,7 @@ public class Revetement {
         this.pourSol=pSol;
         this.prixUnitaire=prix;
     }
+     double getPu(){
+         return this.prixUnitaire;
+     }
 }
