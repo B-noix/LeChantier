@@ -26,4 +26,7 @@ public class Ouverture {
     double surface(){
         return dimx*dimy;
     }
+    int getid(){
+        return this.idOuverture;
+    }
 }

@@ -29,4 +29,7 @@ public class Revetement {
      double getPu(){
          return this.prixUnitaire;
      }
+     int getid(){
+         return this.Idrevetement;
+     }
 }
