@@ -79,4 +79,7 @@ public class Sol {
         }
         return prix;
     }
+    int getid(){
+        return this.idSol;
+    }
 }
