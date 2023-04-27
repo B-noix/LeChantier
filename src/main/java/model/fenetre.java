@@ -8,6 +8,10 @@ package model;
  *
  * @author Benoit
  */
-public class fenetre {
+public class fenetre extends Ouverture{
+    
+    public fenetre(int id, double x, double y) {
+        super(id, x, y);
+    }
     
 }

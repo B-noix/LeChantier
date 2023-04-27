@@ -8,6 +8,10 @@ package model;
  *
  * @author Benoit
  */
-public class Tremie {
+public class Tremie extends Ouverture{
+    
+    public Tremie(int id, double x, double y) {
+        super(id, x, y);
+    }
     
 }
