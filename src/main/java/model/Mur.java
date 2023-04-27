@@ -74,4 +74,7 @@ public class Mur {
         }
         return prix;
     }
+    int getid(){
+        return this.idMur;
+    }
 }

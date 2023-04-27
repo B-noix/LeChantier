@@ -11,11 +11,14 @@ import java.util.*;
  * @author echaslotdenize01
  */
 public class Piece {
+    
+    //attributs
     int idPiece;
     int sol;
     int plafond;
     List<Mur> ListeMur = new ArrayList<Mur>();
     
+    //contructeur
     Piece(int id, int s, int p , List L){
         this.ListeMur=L;
         this.idPiece=id;
@@ -24,13 +27,21 @@ public class Piece {
         
        
     }
-    //calcul la somme de la surface de chaque mur de la piece
-    double surfacePiece(){
+    //calcul la somme de la surface de chaque mur de la piece en enlevant les ouvertures
+    double surfaceMurPiece(){
         int i;
         double s=0;
-        for(i=0;i<this.ListeMur.size();i++){
-         s = this.ListeMur.get(i).surface() + s;
+        for(Mur m:ListeMur){
+         s = m.surface() + s;
         }
         return s;     
     }
+    String toSave(){
+        String s="Piece;"+this.idPiece+";"+this.plafond+";"+this.sol+";Mur;";
+        for(Mur m : ListeMur){
+            s=s+m.getid();
+        }
+        return s;
+    }
+    
 }

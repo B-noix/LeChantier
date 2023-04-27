@@ -20,12 +20,19 @@ public class Ouverture {
     void afficher(){
         System.out.println("Ouverture "+ this.idOuverture+" dimx= "+this.dimx+" ; dimy= " + this.dimy);
     }
+    
+    
+    // renvoie un string bien former pour placer dans le fichier text de sauvegarde
+     // utile seulement dans écriture du fichier text
     String toSave(){
         return( "Ouverture;"+this.idOuverture+";"+this.dimx+";"+this.dimy);
     }
+    
+    //renvoie la valeur de la surface que couvre l'ouverture
     double surface(){
         return dimx*dimy;
-    }
+    }    
+    //revoie un int de l'identifiant de l'ouverture
     int getid(){
         return this.idOuverture;
     }
