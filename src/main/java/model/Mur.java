@@ -9,7 +9,7 @@ import java.util.*;
 public class Mur {
     int idMur;
     Coin debut, fin;
-    
+    ArrayList<Ouverture> ouverture = new ArrayList ();
     List<Revetement> revet = new ArrayList<Revetement>() ;
     
     Mur(int id, Coin dc, Coin fc, List revet)

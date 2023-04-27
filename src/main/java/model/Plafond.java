@@ -39,7 +39,7 @@ public class Plafond {
              return L2*L3; 
             }      
     }
-    public static void afficher(){
+     void afficher(){
         System.out.println("==== plafond =====");
         for ( Coin c : ListeCoins){
             c.afficher();
