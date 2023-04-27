@@ -51,7 +51,23 @@ public class Plafond {
             c.afficher();
         }
     }
-     }
+     String tosave(){
+        String s ;
+        s="plafond;"+this.idPlafond;
+        for(Coin c: ListeCoins){    // pour lecture il faudra faire un while ou un if pour changer d'objet car les liste ouverture et revetement sont a longueur variable
+            s=s+";"+c.getid();
+        }
+        s=s+";revetement";
+        for(Revetement r : ListeRevetements){
+            s=s+";"+r.getid();
+        }
+        s=s+";ouverture";
+        for(Ouverture o : ListeOuverture){
+            s=s+";"+o.getid();
+        }
+        return s;
+    }
+}
      
                 
     
