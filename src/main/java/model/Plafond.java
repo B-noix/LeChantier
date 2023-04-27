@@ -67,6 +67,16 @@ public class Plafond {
         }
         return s;
     }
+      double montantrevet(){
+        double prix=0;
+        for( Revetement r:ListeRevetements){
+            prix=prix+( surface()*r.getPu());
+        }
+        return prix;
+    }
+    int getid(){
+        return this.idPlafond;
+    }
 }
      
                 
