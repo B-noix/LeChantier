@@ -6,10 +6,7 @@ package model;
  */
 
 import java.util.*;
-/**
- *
- * @author Amadou Coulibaly
- */
+
 public class Coin {
 
     @Override
@@ -26,8 +23,8 @@ public class Coin {
     int idCoin;
     double cx;
     double cy;
-    
     ArrayList<Coin> listeCoin;
+    
     // Constructeur
     Coin(int id, double x, double y)
     {
@@ -49,13 +46,14 @@ public class Coin {
      public int getid(){ 
        return idCoin;
    }
-     
+     // renvoie un string bien former pour placer dans le fichier text de sauvegarde
+     // utile seulement dans écriture du fichier text
      public String toSave(){
          StringBuilder sb = new StringBuilder();
         sb.append("Coin");
-        sb.append(",").append(idCoin);
-        sb.append(",").append(cx);
-        sb.append(",").append(cy);
+        sb.append(";").append(idCoin);
+        sb.append(";").append(cx);
+        sb.append(";").append(cy);
         
         return sb.toString();
      }

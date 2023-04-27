@@ -7,17 +7,21 @@ package model;
 
 import java.util.*;
 public class Mur {
+    
+    //attributs
     int idMur;
     Coin debut, fin;
-    ArrayList<Ouverture> ouverture = new ArrayList ();
-    List<Revetement> revet = new ArrayList<Revetement>() ;
+    ArrayList<Ouverture> Listeouverture = new ArrayList ();
+    ArrayList<Revetement> revet = new ArrayList<Revetement>() ;
     
-    Mur(int id, Coin dc, Coin fc, List revet)
+    //constructeur
+    Mur(int id, Coin dc, Coin fc, ArrayList revet, ArrayList ouverture)
     {
         this.idMur=id;
         this.debut=dc;
         this.fin=fc;
         this.revet=revet;
+        this.Listeouverture=ouverture;
     }
     
     void afficher()
@@ -33,13 +37,23 @@ public class Mur {
     
     double surface()
     {
+        double s;
        // System.out.println("\nEntrer la Hauteur du mur (hauteur sous-plafond)");
         //double hsp=Lire.d();
-        return(this.longueur()*2.70);
+        s=(this.longueur()*2.70);
+        for(Ouverture o : Listeouverture){
+            s=s-o.surface();
+        }
+        return s;
     }
-   
+   // renvoie un string bien former pour placer dans le fichier text de sauvegarde
+     // utile seulement dans écriture du fichier text
     public String toSave() {
-        return "Mur" + "," + idMur + "," + debut + "," + fin ;
+        String s= "Mur" + "," + idMur + "," + debut.getid() + "," + fin.getid() ;  // Mur;3;5;8;5;7...
+        for(Ouverture o:Listeouverture){
+            s=s+";"+o.getid();
+        }
+        return s;
     }
     public Coin getdebut() {
         return debut;
