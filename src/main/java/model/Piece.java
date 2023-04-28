@@ -43,5 +43,13 @@ public class Piece {
         }
         return s;
     }
+    // manque le plafond et le sol 
+    double montantRevet(){
+        double prix=0;
+        for (Mur m : ListeMur){
+            prix = m.montantRevet()+prix;
+        }
+        return prix;
+    }
     
 }
