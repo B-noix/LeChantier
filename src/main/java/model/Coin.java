@@ -26,14 +26,14 @@ public class Coin {
     ArrayList<Coin> listeCoin;
     
     // Constructeur
-    Coin(int id, double x, double y)
+   public Coin(int id, double x, double y)
     {
       this.idCoin=id;
       this.cx=x;
       this.cy=y;
     }
     
-    void afficher()
+    public void afficher()
     {
         System.out.println(" Coin : id ="+this.idCoin+" abscisse = "+this.cx+ " Ordonnée ="+this.cy);
     }

@@ -15,7 +15,7 @@ public class Mur {
     ArrayList<Revetement> revet = new ArrayList<Revetement>() ;
     
     //constructeur
-    Mur(int id, Coin dc, Coin fc, ArrayList revet, ArrayList ouverture)
+    public Mur(int id, Coin dc, Coin fc, ArrayList revet, ArrayList ouverture)
     {
         this.idMur=id;
         this.debut=dc;
@@ -24,18 +24,18 @@ public class Mur {
         this.Listeouverture=ouverture;
     }
     
-    void afficher()
+    public void afficher()
     {System.out.println("==== Mur =====");
         this.debut.afficher();
         this.fin.afficher();    
     }
     
-    double longueur()
+    public double longueur()
     {
         return(Math.sqrt((this.fin.cx-this.debut.cx)*(this.fin.cx-this.debut.cx) + (this.fin.cy-this.debut.cy)*(this.fin.cy-this.debut.cy)));
     }
     
-    double surface()
+    public double surface()
     {
         double s;
        // System.out.println("\nEntrer la Hauteur du mur (hauteur sous-plafond)");
@@ -66,15 +66,15 @@ public class Mur {
     public List getReve() {
         return revet;
     }
-    
-    double montantRevet(){
+    // revoie la valeur du prix sur le mur
+    public double montantRevet(){
        double prix=0;
         for(Revetement r : revet ){
             prix=prix + r.getPu()*surface();
         }
         return prix;
     }
-    int getid(){
+    public int getid(){
         return this.idMur;
     }
 }

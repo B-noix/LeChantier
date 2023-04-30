@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package model;
+package controleur;
 
 //import fr.insa.chantier.le_chantier.model.Lire;
 //import fr.insa.chantier.le_chantier.model.Mur;
@@ -12,6 +12,11 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+import model.Coin;
+import model.Lire;
+import model.Mur;
+import model.Piece;
+import model.Revetement;
 /**
  *
  * @author bcosson01

@@ -11,12 +11,15 @@ package model;
 public class Ouverture {
     int idOuverture;
     double dimx,dimy;
-    
+
+    //contructeur
     Ouverture (int id, double x , double y){
         this.idOuverture=id;
         this.dimx=x;
         this.dimy=y;
     }
+    
+    //affiche, sers a rien , seulement pour test
     void afficher(){
         System.out.println("Ouverture "+ this.idOuverture+" dimx= "+this.dimx+" ; dimy= " + this.dimy);
     }

@@ -19,7 +19,7 @@ public class Piece {
     List<Mur> ListeMur = new ArrayList<Mur>();
     
     //contructeur
-    Piece(int id, int s, int p , List L){
+   public  Piece(int id, int s, int p , List L){
         this.ListeMur=L;
         this.idPiece=id;
         this.plafond=p;
@@ -28,7 +28,7 @@ public class Piece {
        
     }
     //calcul la somme de la surface de chaque mur de la piece en enlevant les ouvertures
-    double surfaceMurPiece(){
+    public double surfaceMurPiece(){
         int i;
         double s=0;
         for(Mur m:ListeMur){
@@ -36,7 +36,7 @@ public class Piece {
         }
         return s;     
     }
-    String toSave(){
+    public String toSave(){
         String s="Piece;"+this.idPiece+";"+this.plafond+";"+this.sol+";Mur;";
         for(Mur m : ListeMur){
             s=s+m.getid();
@@ -44,7 +44,7 @@ public class Piece {
         return s;
     }
     // manque le plafond et le sol 
-    double montantRevet(){
+    public double montantRevet(){
         double prix=0;
         for (Mur m : ListeMur){
             prix = m.montantRevet()+prix;
