@@ -7,13 +7,13 @@ package model;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
 import model.Coin;
 import model.Mur;
 
 public class Ecriture {
 
-    public void sauvegarder( List<Coin> ListeCoin, List<Mur> ListMur) {
+    public static void sauvegarder( ArrayList<Coin> ListeCoin, ArrayList<Mur> ListMur,ArrayList<Piece> ListePiece) {
         try {
             FileWriter fw = new FileWriter("sauvegarde.txt");
             BufferedWriter bw = new BufferedWriter(fw);
@@ -24,6 +24,9 @@ public class Ecriture {
 
             for (Mur m : ListMur) {
                 bw.write(m.toSave() + "\n");
+            }
+            for(Piece p: ListePiece){
+                bw.write(p.toSave() + "\n");
             }
 
             bw.close();

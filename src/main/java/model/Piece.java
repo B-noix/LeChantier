@@ -16,10 +16,10 @@ public class Piece {
     int idPiece;
     int sol;
     int plafond;
-    List<Mur> ListeMur = new ArrayList<Mur>();
+    ArrayList<Mur> ListeMur = new ArrayList<Mur>();
     
     //contructeur
-   public  Piece(int id, int s, int p , List L){
+   public  Piece(int id, int s, int p , ArrayList L){
         this.ListeMur=L;
         this.idPiece=id;
         this.plafond=p;

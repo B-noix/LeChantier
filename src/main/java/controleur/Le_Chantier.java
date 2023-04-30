@@ -11,12 +11,9 @@ package controleur;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import model.*;
 import java.util.*;
-import model.Coin;
-import model.Lire;
-import model.Mur;
-import model.Piece;
-import model.Revetement;
+
 /**
  *
  * @author bcosson01
@@ -67,9 +64,9 @@ public class Le_Chantier {
      
     System.out.println(listeCoin);
     
-    List<Revetement> revet = new ArrayList<Revetement>();
-    
-    Mur Mur = new Mur(1,listeCoin.get(0),listeCoin.get(1),revet);
+    ArrayList<Revetement> revet = new ArrayList<Revetement>();
+    ArrayList<Ouverture> Listeouvert = new ArrayList<Ouverture>();
+    Mur Mur = new Mur(1,listeCoin.get(0),listeCoin.get(1),revet,Listeouvert);
     Mur.afficher();
     
     
