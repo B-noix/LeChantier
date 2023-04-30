@@ -19,7 +19,7 @@ import model.Revetement;
 public class lecture {
 
 
-public class Lecture {
+
 
     public  List<Revetement> lireFichierRevetements() throws FileNotFoundException, IOException{
         
@@ -42,4 +42,4 @@ public class Lecture {
     }
 }
 
-}
+
