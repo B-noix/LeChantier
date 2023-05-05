@@ -49,7 +49,7 @@ public class Mur {
    // renvoie un string bien former pour placer dans le fichier text de sauvegarde
      // utile seulement dans écriture du fichier text
     public String toSave() {
-        String s= "Mur" + "," + idMur + "," + debut.getid() + "," + fin.getid() ;  // Mur;3;5;8;5;7...
+        String s= "Mur" + ";" + idMur + ";" + debut.getid() + ";" + fin.getid() ;  // Mur;3;5;8;5;7...
         for(Ouverture o:Listeouverture){
             s=s+";"+o.getid();
         }

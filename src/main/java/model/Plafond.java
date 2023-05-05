@@ -46,7 +46,7 @@ public class Plafond {
         return s;
     }
      void afficher(){
-        System.out.println("==== plafond =====");
+        System.out.println("==== plafond ====");
         for ( Coin c : ListeCoins){
             c.afficher();
         }
